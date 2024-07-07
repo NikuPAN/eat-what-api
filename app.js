@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json()); // Middleware to parse JSON request bodies
 
 // Define API routes
-const API_ROUTE = '/api/v1/eatWhat'
+const API_ROUTE = '/api/v1'
 
 // Get all restaurants
 app.get(`${API_ROUTE}/getAll`, async (req, res) => {
