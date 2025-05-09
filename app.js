@@ -11,6 +11,13 @@ const dynamoDbDocClient = DynamoDBDocumentClient.from(dynamodbClient);
 
 // Initialize Express app
 const app = express();
+
+app.use(cors({
+    origin: '*',
+    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+    allowedHeaders: ['Content-Type','Authorization']
+}));
+
 app.use(express.json()); // Middleware to parse JSON request bodies
 
 // Define API routes
@@ -127,5 +134,5 @@ app.delete(`${API_ROUTE}/delete/:id`, async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
