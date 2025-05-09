@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.614.0",
     "@aws-sdk/lib-dynamodb": "^3.614.0",
