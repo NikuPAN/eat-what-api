@@ -1,5 +1,6 @@
 // Import required modules
 const express = require('express');
+const cors    = require('cors');
 const moment = require('moment');
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { DynamoDBDocumentClient, ScanCommand, GetCommand, PutCommand, UpdateCommand, DeleteCommand } = require('@aws-sdk/lib-dynamodb');
